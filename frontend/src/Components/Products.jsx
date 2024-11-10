@@ -23,7 +23,7 @@ const Products = () => {
 
   const fetchProducts = async () => {
     try {
-      const response = await fetch("http://localhost:5000/user/products", {
+      const response = await fetch("https://se-lab-backend-pe25.onrender.com/user/products", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -52,7 +52,7 @@ const Products = () => {
   const handleAddProduct = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:5000/user/products", {
+      const response = await fetch("https://se-lab-backend-pe25.onrender.com/user/products", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -82,7 +82,7 @@ const Products = () => {
   const handleDeleteProduct = async (id) => {
     try {
       const response = await fetch(
-        `http://localhost:5000/user/products/${id}`,
+        `https://se-lab-backend-pe25.onrender.com/user/products/${id}`,
         {
           method: "DELETE",
         }
@@ -107,7 +107,7 @@ const Products = () => {
     e.preventDefault();
     try {
       const response = await fetch(
-        `http://localhost:5000/user/products/${productToEdit._id}`,
+        `https://se-lab-backend-pe25.onrender.com/user/products/${productToEdit._id}`,
         {
           method: "PUT",
           headers: {
