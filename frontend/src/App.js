@@ -3,6 +3,7 @@ import Login from "./Components/login";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Signup from "./Components/Signup";
 import Products from "./Components/Products";
+import ProtectedRoute from "./Components/ProtectedRoute";
 
 const App = () => {
   return (
@@ -10,7 +11,7 @@ const App = () => {
       <Routes>
        <Route path="/login" element={<Login />} />
        <Route path="/signup" element={<Signup />} />
-       <Route path="/" element={<Products />} />
+       <Route path="/" element={<ProtectedRoute element={<Products />} />} />
       
       </Routes>
     </BrowserRouter>
