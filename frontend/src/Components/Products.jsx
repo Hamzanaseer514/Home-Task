@@ -132,8 +132,20 @@ const Products = () => {
     fetchProducts();
   }, []);
 
+    const logout = () => {
+    localStorage.removeItem('token')
+    window.location.href = "/login"
+  }
+
   return (
     <div className="min-h-screen bg-gray-100 p-8">
+      <button
+      onClick={logout}
+        type="submit"
+        className="  bg-blue-600 text-white text-md font-semibold rounded-lg p-3 hover:bg-blue-700 transition duration-300 ease-in-out"
+      >
+        Logout
+      </button>
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl font-extrabold text-center text-gray-800 mb-8">
           Product Management
